@@ -1,4 +1,4 @@
-package com.elevysi.test.shop;
+package com.elevysi.shop.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

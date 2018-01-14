@@ -1,4 +1,4 @@
-package com.elevysi.test.shop.DAO;
+package com.elevysi.shop.test.DAO;
 
 import static org.junit.Assert.*;
 

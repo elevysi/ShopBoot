@@ -102,6 +102,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-activemq</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
 	</dependencies>
 	
 
@@ -111,6 +122,39 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>2.3.1</version>
+				
+				<executions>
+					<execution>
+						<id>xjc</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+					</execution>
+				</executions>
+				
+				<configuration>
+				<!-- https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Available_Variables where project.basedir-->
+					
+					<!-- Old Syntax https://stackoverflow.com/questions/30200807/maven-jaxb2xjc-failing-to-generate-code -->
+					<!-- <schemaDirectory>${project.basedir}/src/main/resources/soap/</schemaDirectory>
+					<outputDirectory>${project.basedir}/src/main/java/</outputDirectory> -->
+					
+				<!-- 	http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/xjc-mojo.html -->
+					
+					<sources>
+						<source>${project.basedir}/src/main/resources/ws/soap/</source>
+					</sources>
+					<!-- Where should the output dir be? Never in src/main/java https://stackoverflow.com/questions/35242941/jaxb-maven-plugin-not-generating-classes -->
+					<!-- <clearOutputDir>false</clearOutputDir> -->
+				</configuration>
+				
+			</plugin>
+
 		</plugins>
 	</build>
 
