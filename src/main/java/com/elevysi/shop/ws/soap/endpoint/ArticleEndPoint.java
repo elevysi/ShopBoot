@@ -1,6 +1,5 @@
 package com.elevysi.shop.ws.soap.endpoint;
 
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -19,13 +18,13 @@ public class ArticleEndPoint {
 	private static final String NAMESPACE_URI = "http://shop.elevysi.com/ws/soap/";
 	private ArticleDAO articleDAO;
 	private static final ModelMapper modelMapper = new ModelMapper();
-	
-	
+
 	@Autowired
 	public ArticleEndPoint(ArticleDAO articleDAO){
 		this.articleDAO = articleDAO;
 	}
 	
+
 	
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "ArticleDetailsRequest")
 	@ResponsePayload
