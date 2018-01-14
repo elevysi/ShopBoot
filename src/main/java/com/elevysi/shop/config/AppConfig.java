@@ -31,7 +31,7 @@ public class AppConfig {
 	}
 	
 	@Bean
-	public JmsListenerContainerFactory<?> defJmsFactory(ConnectionFactory connectionFactory, DefaultJmsListenerContainerFactoryConfigurer configurer){
+	public JmsListenerContainerFactory<?> jmsFactory(ConnectionFactory connectionFactory, DefaultJmsListenerContainerFactoryConfigurer configurer){
 		DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
 		configurer.configure(factory, connectionFactory);
 		

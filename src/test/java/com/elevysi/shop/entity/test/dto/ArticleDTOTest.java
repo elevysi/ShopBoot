@@ -1,4 +1,4 @@
-package com.elevysi.test.shop.entity.dto;
+package com.elevysi.shop.entity.test.dto;
 
 import static org.junit.Assert.assertEquals;
 

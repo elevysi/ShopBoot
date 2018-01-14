@@ -78,7 +78,7 @@ public class Article {
 		this.price = price;
 	}
 	
-	@Override
+	
 	public String toString(){
 		return "The article name "+this.name+ " and the description "+this.description + " at a price of "+this.getPrice();
 	}
