@@ -38,4 +38,8 @@ public class WebServiceConfig extends WsConfigurerAdapter{
     public XsdSchema articlesSchema(){
         return new SimpleXsdSchema(new ClassPathResource("ws/soap/article.xsd"));
     }
+    
+    public void randomMethod(){
+    	
+    }
 }
