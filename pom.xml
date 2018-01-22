@@ -103,6 +103,14 @@
 			<artifactId>spring-boot-starter-activemq</artifactId>
 		</dependency>
 		
+		<!-- activemq Installed version on os x 5.15.2 on Jan 20th 18-->
+		<dependency>
+			<groupId>org.apache.activemq.tooling</groupId>
+			<artifactId>activemq-junit</artifactId>
+			<version>5.15.2</version>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>wsdl4j</groupId>
 			<artifactId>wsdl4j</artifactId>
@@ -113,6 +121,9 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
 		</dependency>
+		
+		
+		
 	</dependencies>
 	
 
